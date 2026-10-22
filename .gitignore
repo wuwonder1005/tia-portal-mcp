@@ -1,0 +1,7 @@
+# build artifacts
+bin/runtime-temp/
+bin/tia-mcp.log
+bin/selftest-report.txt
+*.user
+.vs/
+obj/
