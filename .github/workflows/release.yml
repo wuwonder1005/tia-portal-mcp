@@ -1,0 +1,27 @@
+name: release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build source archive
+        run: |
+          tar -czf tia-portal-mcp-src.tar.gz \
+            src assets build.cmd build.ps1 README.md README.zh-CN.md LICENSE docs
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            bin/TiaMcpServer.exe
+            tia-portal-mcp-src.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
