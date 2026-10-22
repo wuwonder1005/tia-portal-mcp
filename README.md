@@ -4,6 +4,8 @@ Connect Siemens **TIA Portal V20** to any MCP-compatible AI assistant (DeepSeek 
 
 A single, self-contained executable: `bin/TiaMcpServer.exe` (~66 KB). No installers, no Python, no Node — just Windows' built-in .NET Framework 4.8 and a licensed TIA Portal V20 with Openness.
 
+📖 [中文说明](README.zh-CN.md) · 🎬 [演示](docs/DEMO.zh-CN.md) · 📦 [下载 exe](../../releases/latest)
+
 ---
 
 ## Features
